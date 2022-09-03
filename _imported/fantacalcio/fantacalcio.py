@@ -1,15 +1,7 @@
-"""
-Soluzione proposta per il tema d'esame "Fantacalcio"
-"""
 
 
 def leggi_file(nome_file):
-    """
-    Acquisisci le informazioni sui calciatori
-    :param nome_file: Nome del file che contiene le informazioni sui calciatori
-    :return: una lista di giocatori; ciascun giocatore è rappresentato da un dizionario
-    contenente i 4 campi: nome, squadra, ruolo, costo
-    """
+
     file = open(nome_file, 'r', encoding='utf-8')
     elenco_giocatori = []
     for riga in file:
@@ -26,14 +18,7 @@ def leggi_file(nome_file):
 
 
 def scegli_rosa(info_ruolo, elenco_giocatori):
-    """
-    Sceglie in modo "ottimale" i giocatori per un determinato ruolo
-    (secondo il criterio specificato nel testo).
-    :param info_ruolo: dizionario che contiene la descrizione dei vincoli
-    per la scelta dei giocatori: budget, num (numero di giocatori da scegliere), ruolo
-    :param elenco_giocatori: lista contenente tutti i giocatori (non viene modificata)
-    :return: lista di giocatori contenente quelli selezionati per l'acquisto
-    """
+
 
     # estraggo i dati per comodità
     budget = info_ruolo['budget']
